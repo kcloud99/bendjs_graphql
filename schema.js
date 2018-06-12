@@ -35,3 +35,42 @@ module.exports = new GraphQLSchema({
     })
   })
 })
+
+
+
+// Define schema
+
+Exercise
+-- name
+-- description
+-- video (youtube)
+-- mainType = ExerciseType
+-- subTypes = [ExerciseType]
+-- completed {
+  -- date
+  -- sets
+  --reps
+}
+
+Workout = [Exercise]
+  => date, name
+
+BMI {
+  BMI
+  Date
+}
+Weight {
+  Weight
+  Date
+}
+
+Data from garmin watch
+
+query Day {
+  Workout {
+    [Exercise]
+  }
+  Food // from myFitnessPal??
+  Weight
+  BMI
+}
